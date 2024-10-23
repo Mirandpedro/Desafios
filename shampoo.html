@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Troca de Imagens</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, orange, black);
+        }
+
+        .image {
+            width: 300px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+            cursor: pointer;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Mario.jpg" alt="Imagem 1" class="image">
+        <img src="Mario2.jpg" alt="Imagem 2" class="image hidden">
+    </div>
+    <script>
+        const images = document.querySelectorAll('.image');
+
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                images.forEach(img => {
+                    img.classList.toggle('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
