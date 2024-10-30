@@ -1,0 +1,20 @@
+.galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(255, 0, 195), rgb(0, 251, 255), rgb(89, 255, 0)); /* Customize as needed */
+}
+
+.foto {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.foto.active {
+    width: 400px;
+    height: 400px;
+    z-index: 1;
+}
