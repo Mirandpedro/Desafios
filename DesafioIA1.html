@@ -1,0 +1,80 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="DesafioIA1.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+   
+    <title>Formulário</title>
+  
+  </head>
+  <body>
+    <div class="container"> 
+      <div class="header">
+        <h2>Formulário de Pesquisa</h2>
+      </div>
+
+      <form id="form" class="form">
+        <div class="form-control">
+          <label for="username">Nome</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Digite seu nome de usuário..."
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="email">Escolaridade</label>
+          <input type="text" id="email" placeholder="Digite sua escolaridade" />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="password">Telefone</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Digite seu Telefone"
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="password-confirmation">cidade</label>
+          <input
+            type="password"
+            id="password-confirmation"
+            placeholder="Digite sua Cidade"
+          />
+          <i class="fas fa-exclamation-circle"></i>
+          <i class="fas fa-check-circle"></i>
+          <small>Mensagem de erro</small>
+        </div>
+        <form>
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo">
+              <option value="masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+            </select>
+            <button type="submit">Enviar</button>
+
+      </form>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/f9e19193d6.js" crossorigin="anonymous"></script>
+
+    <script src="Desafio18.js"></script>
+  </body>
+</html>
