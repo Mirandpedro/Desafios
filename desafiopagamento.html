@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Folha de Pagamento</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #800080, #ffffff);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .logo {
+            float: right;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
+        form {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <img class="logo" src="sua_logo.png" alt="Sua Logo"> <h1>Calculadora de Folha de Pagamento</h1>
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"><br><br>
+        <label for="salario">Salário Bruto:</label>
+        <input type="number" id="salario" name="salario"><br><br>
+        <button type="button" onclick="calcular()">Calcular</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+            const nome = document.getElementById("nome").value;
+            const salarioBruto = parseFloat(document.getElementById("salario").value);
+
+            let impostoRenda;
+            if (salarioBruto > 5000) {
+                impostoRenda = salarioBruto * 0.175;
+            } else if (salarioBruto > 4000) {
+                impostoRenda = salarioBruto * 0.12;
+            } else if (salarioBruto > 3000) {
+                impostoRenda = salarioBruto * 0.075;
+            } else if (salarioBruto > 1800) {
+                impostoRenda = salarioBruto * 0.035;
+            } else {
+                impostoRenda = 0;
+            }
+
+            const salarioLiquido = salarioBruto - impostoRenda;
+
+            document.getElementById("resultado").innerHTML = `
+                <h2>Resultado para ${nome}</h2>
+                <p>Salário Bruto: R$ ${salarioBruto.toFixed(2)}</p>
+                <p>Imposto de Renda: R$ ${impostoRenda.toFixed(2)}</p>
+                <p>Salário Líquido: R$ ${salarioLiquido.toFixed(2)}</p>
+            `;
+        }
+    </script>
+</body>
+</html>
